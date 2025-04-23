@@ -1,35 +1,43 @@
 #include <iostream>
+#include <vector>
+#include "algorithms.h"
 
-class SortingAlgorithms
+SortingAlgorithms::SortingAlgorithms ()
 {
-    public:
-        SortingAlgorithms()
-        {
 
-        }
+}
 
-        int* bogo_sort(int list[])
-        {
+void SortingAlgorithms::test ()
+{
+    std::cout << "Using a SortingAlgorithms method\n";
+}
 
-        }
+std::vector<int> SortingAlgorithms::bogo_sort (const std::vector<int> values)
+{
+    return values;
+}
 
-        int* selection_sort(int list[])
-        {
+std::vector<int> SortingAlgorithms::selection_sort (const std::vector<int> values)
+{
+    return values;
+}
 
-        }
+std::vector<int> SortingAlgorithms::bubble_sort (const std::vector<int> values)
+{
+    return values;
+}
 
-        int* bubble_sort(int list[])
-        {
+std::vector<int> SortingAlgorithms::merge_sort (const std::vector<int> values)
+{
+    return values;
+}
 
-        }
+std::vector<int> SortingAlgorithms::quick_sort (const std::vector<int> values)
+{
+    return values;
+}
 
-        int* merge_sort(int list[])
-        {
-
-        }
-
-        bool check_sort(int list[])
-        {
-
-        }
-};
+bool SortingAlgorithms::check_sort (const std::vector<int> values)
+{
+    return true;
+}
