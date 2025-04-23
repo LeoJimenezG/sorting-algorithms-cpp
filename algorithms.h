@@ -8,19 +8,19 @@ class SortingAlgorithms
     public:
         SortingAlgorithms ();
 
-        void test ();
+        std::vector<int> bogo_sort (const std::vector<int>& values);
 
-        std::vector<int> bogo_sort (const std::vector<int> values);
+        std::vector<int> selection_sort (const std::vector<int>& values);
 
-        std::vector<int> selection_sort (const std::vector<int> values);
+        std::vector<int> bubble_sort (const std::vector<int>& values);
 
-        std::vector<int> bubble_sort (const std::vector<int> values);
+        std::vector<int> merge_sort (const std::vector<int>& values);
 
-        std::vector<int> merge_sort (const std::vector<int> values);
+        std::vector<int> quick_sort (const std::vector<int>& values);
 
-        std::vector<int> quick_sort (const std::vector<int> values);
+        bool check_sort (const std::vector<int>& values);
 
-        bool check_sort (const std::vector<int> values);
+        void print_vector (const std::vector<int>& values);
 };
 
 #endif
