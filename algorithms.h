@@ -21,6 +21,9 @@ class SortingAlgorithms
         bool check_sort (const std::vector<int>& values);
 
         void print_vector (const std::vector<int>& values);
+
+    private:
+        int get_index_of_minimum (const std::vector<int>& values, int starting_index);
 };
 
 #endif
