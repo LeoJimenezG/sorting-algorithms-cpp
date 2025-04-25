@@ -6,7 +6,6 @@
 
 SortingAlgorithms::SortingAlgorithms ()
 {
-
 }
 
 std::vector<int> SortingAlgorithms::bogo_sort (const std::vector<int>& values)
@@ -119,7 +118,40 @@ std::vector<int> SortingAlgorithms::merge_sort (const std::vector<int>& values)
 
 std::vector<int> SortingAlgorithms::quick_sort (const std::vector<int>& values)
 {
-    return values;
+    int size = values.size();
+    if (size <= 1)
+    {
+        return values;
+    }
+    int pivot = values[0];
+    std::vector<int> less_than_pivot = {};
+    std::vector<int> greater_than_pivot = {};
+    for (int i = 1; i < size; i++)
+    {
+        if (values[i] < pivot)
+        {
+            less_than_pivot.push_back(values[i]);
+        }
+        else
+        {
+            greater_than_pivot.push_back(values[i]);
+        }
+    }
+
+    std::vector<int> left_part = quick_sort(less_than_pivot);
+    std::vector<int> right_part = quick_sort(greater_than_pivot);
+    std::vector<int> sorted_values = {};
+    for (int value: left_part)
+    {
+        sorted_values.push_back(value);
+    }
+    sorted_values.push_back(pivot);
+    for (int value: right_part)
+    {
+        sorted_values.push_back(value);
+    }
+
+    return sorted_values;
 }
 
 bool SortingAlgorithms::check_sort (const std::vector<int>& values)
