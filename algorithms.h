@@ -24,6 +24,8 @@ class SortingAlgorithms
 
     private:
         int get_index_of_minimum (const std::vector<int>& values, int starting_index);
+
+        std::vector<int> return_vector_from_positions(const std::vector<int>& values, int start, int end);
 };
 
 #endif

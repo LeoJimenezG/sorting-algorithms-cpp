@@ -78,7 +78,43 @@ std::vector<int> SortingAlgorithms::bubble_sort (const std::vector<int>& values)
 
 std::vector<int> SortingAlgorithms::merge_sort (const std::vector<int>& values)
 {
-    return values;
+    int size = values.size();
+    if (size <= 1)
+    {
+        return values;
+    }
+    int middle_index = size / 2;
+    std::vector<int> left_values = return_vector_from_positions(values, 0, middle_index);
+    std::vector<int> right_values = return_vector_from_positions(values, middle_index, size);
+    std::vector<int> left_part = merge_sort(left_values);
+    std::vector<int> right_part = merge_sort(right_values);
+
+    std::vector<int> sorted_values = {};
+    int left_index = 0;
+    int right_index = 0;
+    while (left_index < left_part.size() && right_index < right_part.size())
+    {
+        if (left_part[left_index] < right_part[right_index])
+        {
+            sorted_values.push_back(left_part[left_index]);
+            left_index++;
+        }
+        else
+        {
+            sorted_values.push_back(right_part[right_index]);
+            right_index++;
+        }
+    }
+    for (int i = left_index; i < left_part.size(); i++)
+    {
+        sorted_values.push_back(left_part[i]);
+    }
+    for (int j = right_index; j < right_part.size(); j++)
+    {
+        sorted_values.push_back(right_part[j]);
+    }
+
+    return sorted_values;
 }
 
 std::vector<int> SortingAlgorithms::quick_sort (const std::vector<int>& values)
@@ -119,4 +155,15 @@ int SortingAlgorithms::get_index_of_minimum (const std::vector<int>& values, int
     }
 
     return minimum_index;
+}
+
+std::vector<int> SortingAlgorithms::return_vector_from_positions(const std::vector<int>& values, int start, int end)
+{
+    std::vector<int> result = {};
+    for (int i = start; i < end; i++)
+    {
+        result.push_back(values[i]);
+    }
+
+    return result;
 }
