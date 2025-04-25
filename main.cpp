@@ -29,6 +29,11 @@ int main ()
 
     std::cout << '\n';
 
+    std::vector merge_sorted_numbers = sorting_algorithms.merge_sort(numbers);
+    std::cout << "Merge Sorted vector: ";
+    sorting_algorithms.print_vector(merge_sorted_numbers);
+
+    std::cout << '\n';
 
     return 0;
 }
