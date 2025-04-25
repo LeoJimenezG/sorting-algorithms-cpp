@@ -35,5 +35,10 @@ int main ()
 
     std::cout << '\n';
 
+    std::vector quick_sorted_numbers = sorting_algorithms.quick_sort(numbers);
+    std::cout << "Quick Sorted vector: ";
+    sorting_algorithms.print_vector(quick_sorted_numbers);
+
+    std::cout << '\n';
     return 0;
 }
