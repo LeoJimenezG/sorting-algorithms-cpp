@@ -1,4 +1,4 @@
-# 🔄 Sorting Algorithms C++
+# Sorting Algorithms C++ 🔄
 
 Modern C++ implementations of classic sorting algorithms. Contains fundamental sorting techniques like Bubble Sort, Selection Sort, Merge Sort, Bogo Sort, etc. using std::vector and a header/source file structure.
 
