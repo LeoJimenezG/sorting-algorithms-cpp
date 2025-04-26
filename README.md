@@ -17,7 +17,7 @@ The following five sorting algorithms are implemented:
 - **Merge Sort**: A classic divide-and-conquer algorithm that splits the list into halves, recursively sorts them, and then merges the sorted halves.
 - **Quick Sort**: Another divide-and-conquer algorithm that selects a pivot, partitions the array around it, and recursively sorts the subarrays. Generally faster than Merge Sort in practice.
 
-Each algorithm is defined in a `.cpp` file and declared in a corresponding `.h` header file, following standard C++ project structure. At this stage, all implementations are restricted to the `int` data type, but support for more data types—via C++ templates is planned for future updates.
+Each algorithm is defined in a `.cpp` file and declared in a corresponding `.h` header file, following standard C++ project structure. At this stage, all implementations are restricted to the `int` data type, but support for more data types via C++ templates is planned for future updates.
 
 ---
 
